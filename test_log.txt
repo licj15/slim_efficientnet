@@ -1,0 +1,115 @@
+nohup: ignoring input
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From eval_image_classifier.py:94: get_or_create_global_step (from tensorflow.contrib.framework.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.get_or_create_global_step
+WARNING:tensorflow:From /home/yf22/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/yf22/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/contrib/slim/python/slim/data/parallel_reader.py:242: string_input_producer (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensor_slices(string_tensor).shuffle(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If `shuffle=False`, omit the `.shuffle(...)`.
+WARNING:tensorflow:From /home/yf22/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/training/input.py:278: input_producer (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensor_slices(input_tensor).shuffle(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If `shuffle=False`, omit the `.shuffle(...)`.
+WARNING:tensorflow:From /home/yf22/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/training/input.py:190: limit_epochs (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensors(tensor).repeat(num_epochs)`.
+WARNING:tensorflow:From /home/yf22/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/training/input.py:199: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /home/yf22/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/training/input.py:199: add_queue_runner (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /home/yf22/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/training/input.py:202: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /home/yf22/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/contrib/slim/python/slim/data/parallel_reader.py:94: TFRecordReader.__init__ (from tensorflow.python.ops.io_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.TFRecordDataset`.
+WARNING:tensorflow:From /home/yf22/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/ops/image_ops_impl.py:618: to_double (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /home/yf22/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/ops/image_ops_impl.py:619: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From eval_image_classifier.py:137: batch (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.batch(batch_size)` (or `padded_batch(...)` if `dynamic_pad=True`).
+INFO:tensorflow:Scale of 0 disables regularizer.
+WARNING:tensorflow:From eval_image_classifier.py:161: streaming_accuracy (from tensorflow.contrib.metrics.python.ops.metric_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.metrics.accuracy. Note that the order of the labels and predictions arguments has been switched.
+WARNING:tensorflow:From eval_image_classifier.py:163: streaming_recall_at_k (from tensorflow.contrib.metrics.python.ops.metric_ops) is deprecated and will be removed after 2016-11-08.
+Instructions for updating:
+Please use `streaming_sparse_recall_at_k`, and reshape labels from [batch_size] to [batch_size, 1].
+WARNING:tensorflow:From /home/yf22/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/contrib/metrics/python/ops/metric_ops.py:2170: streaming_mean (from tensorflow.contrib.metrics.python.ops.metric_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.metrics.mean
+WARNING:tensorflow:From eval_image_classifier.py:170: Print (from tensorflow.python.ops.logging_ops) is deprecated and will be removed after 2018-08-20.
+Instructions for updating:
+Use tf.print instead of tf.Print. Note that tf.print returns a no-output operator that directly prints the output. Outside of defuns or eager mode, this operator will not be executed unless it is directly specified in session.run or used as a control dependency for other operators. This is only a concern in graph mode. Below is an example of how to ensure tf.print executes in graph mode:
+```python
+    sess = tf.Session()
+    with sess.as_default():
+        tensor = tf.range(10)
+        print_op = tf.print(tensor)
+        with tf.control_dependencies([print_op]):
+          out = tf.add(tensor, tensor)
+        sess.run(out)
+    ```
+Additionally, to use tf.print in python 2.7, users must make sure to import
+the following:
+
+  `from __future__ import print_function`
+
+INFO:tensorflow:Evaluating weights/model.ckpt-501808
+INFO:tensorflow:Starting evaluation at 2019-05-30T11:44:35Z
+INFO:tensorflow:Graph was finalized.
+2019-05-30 04:44:35.702576: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-05-30 04:44:38.660719: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x657d0f0 executing computations on platform CUDA. Devices:
+2019-05-30 04:44:38.660852: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): GeForce RTX 2080 Ti, Compute Capability 7.5
+2019-05-30 04:44:38.665347: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2200000000 Hz
+2019-05-30 04:44:38.667743: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x66e04d0 executing computations on platform Host. Devices:
+2019-05-30 04:44:38.667772: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-05-30 04:44:38.668408: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: GeForce RTX 2080 Ti major: 7 minor: 5 memoryClockRate(GHz): 1.545
+pciBusID: 0000:64:00.0
+totalMemory: 10.73GiB freeMemory: 10.57GiB
+2019-05-30 04:44:38.668431: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-05-30 04:44:38.670942: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-30 04:44:38.670958: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-05-30 04:44:38.670966: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-05-30 04:44:38.671500: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10284 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2080 Ti, pci bus id: 0000:64:00.0, compute capability: 7.5)
+WARNING:tensorflow:From /home/yf22/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+INFO:tensorflow:Restoring parameters from weights/model.ckpt-501808
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+WARNING:tensorflow:From /home/yf22/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/training/monitored_session.py:809: start_queue_runners (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+2019-05-30 04:44:41.753080: E tensorflow/core/util/events_writer.cc:108] Write failed because file could not be opened.
+2019-05-30 04:44:42.134979: E tensorflow/core/util/events_writer.cc:108] Write failed because file could not be opened.
+2019-05-30 04:44:43.123273: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+INFO:tensorflow:Evaluation [50/500]
+INFO:tensorflow:Evaluation [100/500]
+INFO:tensorflow:Evaluation [150/500]
+INFO:tensorflow:Evaluation [200/500]
+INFO:tensorflow:Evaluation [250/500]
+INFO:tensorflow:Evaluation [300/500]
+INFO:tensorflow:Evaluation [350/500]
+INFO:tensorflow:Evaluation [400/500]
+INFO:tensorflow:Evaluation [450/500]
+INFO:tensorflow:Evaluation [500/500]
+eval/Recall_5[0.86714]eval/Accuracy[0.66074]
+
+2019-05-30 04:46:58.103400: E tensorflow/core/util/events_writer.cc:108] Write failed because file could not be opened.
+INFO:tensorflow:Finished evaluation at 2019-05-30-11:46:58
